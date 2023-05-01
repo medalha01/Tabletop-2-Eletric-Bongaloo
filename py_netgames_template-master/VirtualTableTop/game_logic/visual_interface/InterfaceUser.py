@@ -55,9 +55,11 @@ class InterfaceUser(PyNetgamesServerListener):
 
     def receive_connection_success(self):
         print("Connection Success")
+        self.connected = True
 
     def send_match(self):
-        self.server_proxy.send_match("2")
+        print("Bom dia, professor!")
+        self.server_proxy.send_match(2)
 
     def receive_disconnect(self):
         pass
@@ -68,7 +70,7 @@ class InterfaceUser(PyNetgamesServerListener):
     def receive_match(self, match):
         print("Match received")
         print("Order", match.position)
-        print("Id", match.id)
+        print("Id", match.match_id)
 
     def receive_move(self, move):
         pass

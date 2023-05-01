@@ -87,7 +87,7 @@ class VirtualTableTopGUI(tk.Tk):
         )
         matchMenu.add_command(
             label="Configure Match",
-            command=lambda: self.interface.send_match,
+            command=self.interface.send_match,
         )
 
         characterMenu.add_command(
